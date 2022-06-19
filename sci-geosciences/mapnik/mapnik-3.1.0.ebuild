@@ -24,8 +24,16 @@ IUSE="cairo debug doc gdal osmfonts postgres sqlite test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=dev-libs/boost-1.48:=[threads]
-	<dev-libs/boost-1.77:=[threads]
+	|| (
+		(
+			>=dev-libs/boost-1.48:=[threads]
+			<dev-libs/boost-1.77:=[threads]
+		)
+		(
+			>=dev-libs/boost-1.77
+			<dev-libs/boost-1.80
+		)
+	)
 	dev-libs/icu:=
 	sys-libs/zlib
 	media-libs/freetype

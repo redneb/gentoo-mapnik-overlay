@@ -35,7 +35,7 @@ RDEPEND="
 	media-libs/tiff:0=
 	virtual/jpeg:0=
 	media-libs/libwebp:=
-	sci-libs/proj
+	<sci-libs/proj-8
 	media-fonts/dejavu
 	x11-libs/agg[truetype]
 	cairo? (
